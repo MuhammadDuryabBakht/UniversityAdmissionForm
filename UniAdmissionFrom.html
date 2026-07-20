@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCUF | Admission Form</title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;"><u>GCUF Admission Form</u></h1>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <img src="GCUF Logo.png" alt="GCUF logo" height="50">
+    </div> 
+    <form action="/AdmissionData" method="post" enctype="multipart/form-data"><br>
+        <fieldset>
+            <legend><b>Student Information</b></legend>
+                <label for="Student-Name">Student Name</label>
+                <input type="text" id="Student-Name" name="Student Name" placeholder="Enter Your full Name" autocomplete="on" required>
+                <label for="PP" style="margin-left: 400px;">Profile Photo</label>
+                <input type="file" id="PP" name="Profile Photo" accept="image/*" required><br><br>
+                <label for="Father's-Name">Father's Name</label>
+                <input id="Father's-Name" type="text" name="Father's Name" placeholder="Enter your Father's Name" autocomplete="on" required><br><br>
+                <label for="CNIC/B-form">CNIC/B-form</label>
+                <input id="CNIC/B-form" name="CNIC/B-form" type="text" placeholder="Enter your CNIC/B-form number" size="25" autocomplete="on" required><br><br>
+                <label for="DOB">Date of Birth</label>
+                <input id="DOB" name="DOB" type="date" max="2009-12-30" min="2000-01-01" autocomplete="on" required>
+                <p>Gender</p>
+                <input type="radio" id="Male" name="Gender" value="Male" required>
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="Gender" value="Female" required>
+                <label for="Female">Female</label><br>
+                <input type="radio" id="Prefer not to say" name="Gender" value="Prefer not to say" required>
+                <label for="Prefer not to say">Prefer not to say</label><br><br>
+                <label for="nationality">Nationality</label>
+                <input list="countries" id="nationality" name="Nationality" placeholder="Select your Country" autocomplete="on" required>
+                <datalist id="countries">
+                    <option>Pakistan</option>
+                    <option>Portugal</option>
+                    <option>Greece</option>
+                    <option>Italy</option>
+                    <option>Spain</option>
+                    <option>France</option>
+                    <option>Thiland</option>
+                    <option>Australia</option>
+                    <option>New Zealand</option>
+                    <option>India</option>
+                    <option>Bhutan</option>
+                    <option>Canada</option>
+                    <option>Switzerland</option>
+                    <option>United Kingdom</option>
+                    <option>Germany</option>
+                    <option>Netherlands</option>
+                    <option>Norway</option>
+                    <option>Iceland</option>
+                    <option>United States</option>
+                    <option>Japan</option>
+                </datalist>
+        </fieldset>
+        <fieldset>
+            <legend><b>Contact Information</b></legend>
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="Email" placeholder="Enter your Email" autocomplete="email" required><br><br>
+            <label for="PNumber">Phone Number</label>
+            <input type="tel" id="PNumber"  name="Phone Number" placeholder="Enter your Phone Number" pattern="[0-9]{11}" autocomplete="tel" required><br><br>
+            <label for="Address">Address</label>
+            <input type="text" id="Address" name="Address" placeholder="Enter your Address" autocomplete="on" required><br><br>
+            <label for="Province">Province</label>
+            <input list="Provinces" id="Province" name="Province" placeholder="Select your Province" autocomplete="on" required><br><br>
+                <datalist id="Provinces">
+                    <option>Punjab</option>
+                    <option>Khyber Pakhtunkhwa</option>
+                    <option>Gilgit Baltistan</option>
+                    <option>Bloachistan</option>
+                    <option>Sindh</option>
+                    <option>Azad & Jammu Kashmir</option>
+                </datalist>
+            <label for="City">City</label>
+            <input list="Cities" id="City" name="City" placeholder="Select your City" autocomplete="on" required><br><br>
+                <datalist id="Cities">
+                    <option>Jhang</option>
+                    <option>Faisalabad</option>
+                    <option>Lahore</option>
+                    <option>Islamabad</option>
+                    <option>Karachi</option>
+                    <option>Quetta</option>
+                    <option>Chilas</option>
+                    <option>Peshawar</option>
+                    <option>Sargodha</option>
+                    <option>Multan</option>
+                    <option>Chiniot</option>
+                    <option>Toba Tek Singh</option>
+                    <option>Rawalpindi</option>
+                    <option>Murree</option>
+                    <option>Mandi Bhauddin</option>
+                    <option>Rahim Yar Khan</option>
+                    <option>Layyah</option>
+                    <option>Abbottabad</option>
+                    <option>Sahiwal</option>
+                    <option>Dera Ismail Khan</option>
+                </datalist>
+        </fieldset>
+        <fieldset>
+            <legend><b>Academic Information</b></legend>
+            <h3><u>Secondary Education</u></h3>
+            <label for="MBoard">Board</label>
+            <select id="MBoard" name="Matric Board" required>
+                <option value="" selected disabled>Select your Matric Board</option>
+                <optgroup label="Federal Board">
+                    <option value="FBISE">Federal Board of Intermediate and Secondary Education</option>
+                    <option value="FDE">Federal Directorate of Education</option>
+                </optgroup>
+                <optgroup label="Punjab">
+                    <option value="BISE Lahore">BISE Lahore</option>
+                    <option value="BISE Rawalpindi">BISE Rawalpindi</option>
+                    <option value="BISE Faisalabad">BISE Faisalabad</option>
+                    <option value="BISE Gujranwala">BISE Gujranwala</option>
+                    <option value="BISE Multan">BISE Multan</option>
+                    <option value="BISE Sargodha">BISE Sargodha</option>
+                    <option value="BISE Bahawalpu">BISE Bahawalpur</option>
+                    <option value="BISE Dera Ghazi Khan">BISE Dera Ghazi Khan</option>
+                    <option value="BISE Sahiwal">BISE Sahiwal</option>
+                </optgroup>
+                <optgroup label="Sindh">
+                    <option value="BISE Karachi (Secondary Education)">BISE Karachi (Secondary Education)</option>
+                    <option value="BISE Hyderabad">BISE Hyderabad</option>
+                    <option value="BISE Sukkur">BISE Sukkur</option>
+                    <option value="BISE Larkana">BISE Larkana</option>
+                    <option value="BISE Mirpurkhas">BISE Mirpurkhas</option>
+                    <option value="BISE Mirpurkhas">BISE Mirpurkhas</option>
+                </optgroup>
+                <optgroup label="Balochistan">
+                    <option value="BISE Quetta">BISE Quetta</option>
+                </optgroup>
+                <optgroup label="Khyber Pakhtunkhwa">
+                    <option value="BISE Peshawar">BISE Peshawar</option>
+                    <option value="BISE Abbottabad">BISE Abbottabad</option>
+                    <option value="BISE Kohat">BISE Kohat</option>
+                    <option value="BISE Mardan">BISE Mardan</option>
+                    <option value="BISE Bannu">BISE Bannu</option>
+                    <option value="BISE Malakand">BISE Malakand</option>
+                    <option value="BISE Dera Ismail Khan">BISE Dera Ismail Khan</option>
+                    <option value="BISE Swat">BISE Swat</option>
+                </optgroup>
+                <optgroup label="Gilgit Baltistan">
+                    <option value="BISE Gilgit-Baltistan">BISE Gilgit-Baltistan</option>
+                </optgroup>
+            </select>
+            <label for="MatMaxMarks" style="margin-left: 150px;">Total Marks</label>
+            <input type="number" id="MatMaxMarks" name="Matric Max Marks" step="1" min="1100" max="1200" required>
+            <label for="MatObtMarks" style="margin-left: 150px;">Obtained Marks</label>
+            <input type="number" id="MatObtMarks" name="Matric Obtained Marks" step="1" min="450" max="1200" required>
+            <h3><u>Higher Secondary Education</u></h3>
+            <label for="IntBoard">Board</label>
+            <select id="IntBoard" name="Intermediate Board" required>
+                <option value="" selected disabled>Select your Intermediate Board</option>
+                <optgroup label="Federal Board">
+                    <option value="FBISE">Federal Board of Intermediate and Secondary Education</option>
+                    <option value="FDE">Federal Directorate of Education</option>
+                </optgroup>
+                <optgroup label="Punjab">
+                    <option value="BISE Lahore">BISE Lahore</option>
+                    <option value="BISE Rawalpindi">BISE Rawalpindi</option>
+                    <option value="BISE Faisalabad">BISE Faisalabad</option>
+                    <option value="BISE Gujranwala">BISE Gujranwala</option>
+                    <option value="BISE Multan">BISE Multan</option>
+                    <option value="BISE Sargodha">BISE Sargodha</option>
+                    <option value="BISE Bahawalpu">BISE Bahawalpur</option>
+                    <option value="BISE Dera Ghazi Khan">BISE Dera Ghazi Khan</option>
+                    <option value="BISE Sahiwal">BISE Sahiwal</option>
+                </optgroup>
+                <optgroup label="Sindh">
+                    <option value="BIEK Karachi (Intermediate Education)">BIEK Karachi (Intermediate Education)</option>
+                    <option value="BISE Hyderabad">BISE Hyderabad</option>
+                    <option value="BISE Sukkur">BISE Sukkur</option>
+                    <option value="BISE Larkana">BISE Larkana</option>
+                    <option value="BISE Mirpurkhas">BISE Mirpurkhas</option>
+                    <option value="BISE Mirpurkhas">BISE Mirpurkhas</option>
+                </optgroup>
+                <optgroup label="Balochistan">
+                    <option value="BISE Quetta">BISE Quetta</option>
+                </optgroup>
+                <optgroup label="Khyber Pakhtunkhwa">
+                    <option value="BISE Peshawar">BISE Peshawar</option>
+                    <option value="BISE Abbottabad">BISE Abbottabad</option>
+                    <option value="BISE Kohat">BISE Kohat</option>
+                    <option value="BISE Mardan">BISE Mardan</option>
+                    <option value="BISE Bannu">BISE Bannu</option>
+                    <option value="BISE Malakand">BISE Malakand</option>
+                    <option value="BISE Dera Ismail Khan">BISE Dera Ismail Khan</option>
+                    <option value="BISE Swat">BISE Swat</option>
+                </optgroup>
+                <optgroup label="Gilgit Baltistan">
+                    <option value="BISE Gilgit-Baltistan">BISE Gilgit-Baltistan</option>
+                </optgroup>
+            </select>
+            <label for="IntMaxMarks" style="margin-left: 150px;">Total Marks</label>
+            <input type="number" id="IntMaxMarks" name="Intermediate Max Marks" step="1" min="1100" max="1200" required>
+            <label for="IntObtMarks" style="margin-left: 150px;">Obtained Marks</label>
+            <input type="number" id="IntObtMarks" name="Intermediate Obtained Marks" step="1" min="450" max="1200" required><br><br>
+            <h3><u>Program Selection in University</u></h3>
+            <label for="DesiredProgram">Desired Program</label>
+            <select id="DesiredProgram" name="Desired Program"  required>
+                <option value="" selected disabled>Select the program to take admission</option>
+                <optgroup label="Faculty of Arts & Social Sciences">
+                    <option value="Applied Linguistics">Applied Linguistics</option>
+                    <option value="Applied Psychology">Applied Psychology</option>
+                    <option value="College of Law">College of Law</option>
+                    <option value="Education">Education</option>
+                    <option value="English">English</option>
+                </optgroup>
+                <optgroup label="Faculty of Physical Sciences">
+                    <option value="Applied Chemistry">Applied Chemistry</option>
+                    <option value="Center of Data Science">Center of Data Science</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                </optgroup>
+                <optgroup label="Faculty of Pharmaceutical Sciences">
+                    <option value="Pharmaceutical Chemistry">Pharmaceutical Chemistry</option>
+                    <option value="Pharmaceutics">Pharmaceutics</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="Pharmacy Practice">Pharmacy Practice</option>
+                    <option></option>
+                </optgroup>
+                <optgroup label="Faculty of Economics & Management Sciences">
+                    <option value="Commerce">Commerce</option>
+                    <option value="Directorate of Distance Learning">Directorate of Distance Learning</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Industrial Management">Industrial Management</option>
+                    <option value="Public Administration">Public Administration</option>
+                </optgroup>
+            </select>
+            <br><br><label for="semester">Semester</label>
+            <select name="semester" id="semester" required>
+                <option value="" selected disabled>Select your Semester</option>
+                <option value="1st">1st(New Admission)</option>
+                <option value="5th">5th(Bridging Admission)</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend><b>Documents</b></legend>
+            <label for="MatricResult">Upload Matric Certificate</label>
+            <input id="MatricResult" name="Matric Certificate" type="file" accept="image/*,.pdf" required><br><br>
+            <label for="InterResult">Upload Intermediate Certificate</label>
+            <input id="InterResult" name="Intermediate Certificate" type="file" accept="image/*,.pdf" required>
+        </fieldset>
+        <h3>Declaration</h3>
+        <input type="checkbox" id="Declaration" name="Declaration" required>
+        <label for="Declaration">I certify that all information is correct.</label><br><br>
+        <input type="submit"><br><Br>
+        <input type="reset" name="Reset" id="Reset">
+        <label for="Reset">⚠ Clicking Reset will clear all entered information.</label>
+    </form>
+</body>
+</html>
